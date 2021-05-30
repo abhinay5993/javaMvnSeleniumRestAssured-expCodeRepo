@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44036" started-at="2021-05-31T00:08:21 IST" finished-at="2021-05-31T00:09:05 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44036" started-at="2021-05-31T00:08:21 IST" finished-at="2021-05-31T00:09:05 IST">
+      <class name="testScripts.TC03_VerifyProductPageNavigation_byClickOnListPageItem">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:testScripts.TC03_VerifyProductPageNavigation_byClickOnListPageItem@7d70d1b1]" name="startBrowser" is-config="true" duration-ms="29091" started-at="2021-05-31T00:08:21 IST" finished-at="2021-05-31T00:08:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="verifyListToPdNavigationAndValidateDetails()[pri:0, instance:testScripts.TC03_VerifyProductPageNavigation_byClickOnListPageItem@7d70d1b1]" name="verifyListToPdNavigationAndValidateDetails" duration-ms="12478" started-at="2021-05-31T00:08:50 IST" finished-at="2021-05-31T00:09:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyListToPdNavigationAndValidateDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testScripts.TC03_VerifyProductPageNavigation_byClickOnListPageItem@7d70d1b1]" name="tearDown" is-config="true" duration-ms="1956" started-at="2021-05-31T00:09:03 IST" finished-at="2021-05-31T00:09:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testScripts.TC03_VerifyProductPageNavigation_byClickOnListPageItem -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
