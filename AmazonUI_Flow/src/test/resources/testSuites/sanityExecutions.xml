@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SanityAmazone">
+  <test name="sanityExecutions">
+    <classes>
+      <class name="testScripts.TC01_LaunchAmzaonWebApp" />
+      <class name="testScripts.TC02_NavigateToListPage_By_Search" />
+      <class name="testScripts.TC03_VerifyProductPageNavigation_byClickOnListPageItem" />
+    </classes>
+  </test>
+</suite>
