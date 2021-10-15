@@ -1,0 +1,37 @@
+1. Git clone
+==============
+git clone <https://name-of-the-repository-link>
+
+2. Git branch
+=============
+git branch <branch-name>
+git push -u <remote> <branch-name>
+
+3. Viewing branches:
+===================
+git branch or git branch --list
+
+4. Deleting a branch:
+===================
+git branch -d <branch-name>
+
+5. Git checkout
+=================
+git checkout <name-of-your-branch>
+
+6. Git checkout and Create a new Banch at the same time
+==========================================================
+git checkout -b <name-of-your-branch>
+
+7. Git status
+===============
+git status
+
+8. Git add
+============
+To add a single file:
+git add <file>
+
+To add everything at once:
+git add -A
+
