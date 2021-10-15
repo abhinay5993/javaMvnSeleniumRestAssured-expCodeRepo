@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="myAutoRuuner">
+	<test name="WebUiTestCases">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testScripts." />
+		</classes>
+	</test>
+</suite>
