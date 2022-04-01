@@ -24,11 +24,11 @@ public class GetContactNumber {
 		return personName;
 	}
 	
-	public static void getMobileNoByNameSearch(String searhName) {
+	public static void getMobileNoByNameSearch(String string) {
 		String getResMobileNo = null;
 		for(int i=0;i<contactData.size();i++)
 		{
-			if(contactData.get(i).getPersonName().equals(searhName))
+			if(contactData.get(i).getPersonName().equals(string))
 			{
 				getResMobileNo=contactData.get(i).getMobileNo();
 				break;

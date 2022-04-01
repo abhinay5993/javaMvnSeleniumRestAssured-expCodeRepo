@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class LinearSearchExp {
 
-	public static void main(String[] args) {
+	public static void main(GuviCustStringExps[] args) {
 		int testData[] = { 1, 21, 45, 66, 98, 85, 78, 4, 55, 48 };
 		System.out.println("\nAvailable Data : " + Arrays.toString(testData));
 		int itemTobeSearched = 45;
