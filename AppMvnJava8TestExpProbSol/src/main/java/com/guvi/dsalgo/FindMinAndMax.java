@@ -1,13 +1,20 @@
 package com.guvi.dsalgo;
 import java.util.Arrays;
+import mathameticsPack.GuviUtilsClass_Persons;
 
 public class FindMinAndMax {
 	
-	public static void main(String[] args) {
+	public static void main(GuviCustStringExps[] args) {
 		double testData[]={5,8,5,3,8,0,6.66,-1.25,0.99,45,33,-54,-0.255};
-		System.out.println("\nData Before Sorting : "+Arrays.toString(testData));
+		System.out.println("\nUsed input Data : "+Arrays.toString(testData));
 		findMinAndMaxFromAarray(testData);
 		computeSumAndAvg(testData);
+		
+		GuviUtilsClass_Persons personObj=new GuviUtilsClass_Persons();
+		personObj.setPanNo("3jjdkk3k");
+		personObj.setName("Atif Aslam");
+		personObj.setMobileNo("+91-dkskkfkfj");
+		personObj.getPersonDetails();
 	}
 
 	public static void findMinAndMaxFromAarray(double inpData[])

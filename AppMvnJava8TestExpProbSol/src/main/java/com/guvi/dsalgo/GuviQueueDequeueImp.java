@@ -74,7 +74,7 @@ public class GuviQueueDequeueImp {
 		System.out.println("\nItem Deleted : " + delObj);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(GuviCustStringExps[] args) {
 		addInitialDataIntoArray();
 		obj.pushEnque(377);
 		obj.pushEnque(null);
