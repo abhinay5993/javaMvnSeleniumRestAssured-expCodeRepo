@@ -75,7 +75,7 @@ public class RotatedVersionOfInputArray {
 		
 	}
 	
-	public static void main(GuviCustStringExps[] args) {
+	public static void main(String[] args) {
 		addInitialDataIntoArray();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter k-th position of Array through which array to be rottated : ");
