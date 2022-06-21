@@ -1,4 +1,4 @@
-package com.prog.odinsexps.week4assign;
+package com.prog.odinsexps.week5assign;
 
 public class User {
 
