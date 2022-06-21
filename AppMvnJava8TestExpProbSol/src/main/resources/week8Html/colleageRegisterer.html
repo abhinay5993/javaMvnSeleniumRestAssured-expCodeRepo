@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Register</title>
+</head>
+
+<body>
+    <center>
+        <h2 style="color:Green">Welcome to OdinSchool...Register Here!!!</h2>
+        <form>
+            <table id="registerTab" border="1">
+            <tr><td><label>Enter UserName:</label> <input type="text" name="username" /></td></tr>
+            <br><br>
+            <tr><td><label>Enter Password:</label> <input type="password" name="password" /></td></tr>
+            <br><br>
+            <tr><td><lable>Enter your MobileNumber:</lable> <input type="text" name="mobilenumber" /></td></tr>
+            <br><br>
+            <tr><td><lable style="vertical-align:auto">Enter Address:</lable> <textarea rows="6" cols="12"></textarea></td></tr>
+            <br><br>
+            <tr><td>
+            <label>Select Gender:</label>
+            <input type="radio" name="g" value="Male">Male
+            <input type="radio" name="g" value="female">Female
+            </td></tr>
+            <tr><td>
+            <lable>Select Qualification:</lable>
+            <select name="qualification">
+                <option value="select">Select</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MCA">MCA</option>
+                <option value="AnyDegree">AnyDegree</option>
+                <option value="MBA">MBA</option>
+            </select>
+            </td></tr>
+            <tr><td>
+            <lable>Choose Technologies:</lable>
+            <select name="courses" multiple>
+                <option value="Java">JavaFullStack</option>
+                <option value="MERN">MERN Fullstack</option>
+                <option value="Python">Python</option>
+                <option value="React.js">React.js</option>
+                <option value="Hadoop">Hadoop</option>
+            </select>
+            </td></tr>
+            <tr><td>
+            <lable>Prefered Timings:</lable>
+            <input type="checkbox" name="time1" value="8AM TO 12PM">8AM TO 12AM
+            <input type="checkbox" name="time2" value="2PM TO 6PM">2PM TO 6PM
+            <input type="checkbox" name="time3" value="7PM TO 10PM">7PM TO 10PM
+            </td></tr>
+            <tr><td>
+            <label>Date of joining:</label>
+            <input type="date" name="doj" />
+            </td></tr>
+            <tr><td>
+            <lable>upload your photo:</lable>
+            <input type="file" name="photo" />
+            </td></tr>
+            <tr><td>
+            <lable>Upload your resume:</lable>
+            <input type="file" name="resume" />
+            </td></tr>
+            <tr><td>
+            <input type="submit" value="Register" />
+            </td></tr>
+        </table>
+        </form>
+    </center>
+</body>
+
+</html>
