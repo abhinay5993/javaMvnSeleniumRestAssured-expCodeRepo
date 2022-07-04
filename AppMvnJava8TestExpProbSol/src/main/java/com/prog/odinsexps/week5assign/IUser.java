@@ -1,9 +1,10 @@
 package com.prog.odinsexps.week5assign;
+import java.util.List;
 
 public interface IUser {
 	
-	boolean addUserDetails(User userObj);
+	boolean addUserDetails(List<User> lnkUserObj);
 	
-	void getAllUserDetails();
+	boolean performLogIn(String userName, String passWord);
 
 }

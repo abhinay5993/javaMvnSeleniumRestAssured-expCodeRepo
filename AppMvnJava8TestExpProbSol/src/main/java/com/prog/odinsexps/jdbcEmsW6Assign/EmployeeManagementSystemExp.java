@@ -1,5 +1,4 @@
 package com.prog.odinsexps.jdbcEmsW6Assign;
-
 import java.sql.SQLException;
 import java.util.Scanner;
 

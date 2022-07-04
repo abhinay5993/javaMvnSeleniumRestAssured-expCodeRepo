@@ -12,12 +12,6 @@ public class Vehicles {
 		this.price = price;
 	}
 
-	@Override
-	public String toString() {
-		return "Vehicles [brandName=" + brandName + ", yearOfRegistration=" + yearOfRegistration + ", price=" + price
-				+ "]";
-	}
-
 	public String getBrandName() {
 		return brandName;
 	}

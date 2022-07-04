@@ -2,27 +2,24 @@ package com.prog.odinsexps.week5assign;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class UserImpl implements IUser {
 
-	ArrayList<User> arrayListOfUsers;
-	LinkedList<User> linkedUser;
+	List<User> userCollect;
+	ArrayList<User> userArrayListObj;
 	
 	@Override
-	public boolean addUserDetails(User userObj) {
-		if (userObj != null) {
-			LinkedList<User> linkedUserObj = new LinkedList<>();
-			return linkedUserObj.add(userObj);
-		}
-		return false;
+	public boolean addUserDetails(List<User> lnkUserObj) {
+		    userCollect=new LinkedList<User>();
+		    return userCollect.addAll(lnkUserObj);
 	}
 	
-	@Override
 	public void getAllUserDetails() {
 		try {
-			arrayListOfUsers = new ArrayList<>(linkedUser);
-			Iterator<User> itr = arrayListOfUsers.iterator();
-
+			userArrayListObj=new ArrayList<User>(userCollect);
+			Iterator<User> itr = userArrayListObj.iterator();
+			System.out.println("\nList of Registered Users Count : "+userArrayListObj.size());
 			System.out.println("\nAll User Details : ");
 			System.out.println("\n===================");
 			while (itr.hasNext()) {
@@ -39,7 +36,7 @@ public class UserImpl implements IUser {
 	public boolean performLogIn(String userName, String password) {
 		boolean fgBlnStatus = false;
 		try {
-			Iterator<User> itr = arrayListOfUsers.iterator();
+			Iterator<User> itr = userArrayListObj.iterator();
 			while (itr.hasNext()) {
 				User userObj = itr.next();
 				if (userObj.getUserName().equals(userName) && userObj.getPassword().equals(password)) {
@@ -52,6 +49,6 @@ public class UserImpl implements IUser {
 		}
 		return fgBlnStatus;
 	}
-	
+
 	
 }

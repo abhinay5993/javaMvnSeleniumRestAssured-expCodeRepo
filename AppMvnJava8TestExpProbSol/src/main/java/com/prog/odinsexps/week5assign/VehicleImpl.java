@@ -2,28 +2,31 @@ package com.prog.odinsexps.week5assign;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class VehicleImpl implements IVechicle {
 
-	LinkedList<Vehicles> linkedVehicles;
+	List<Vehicles> vehiclesCollect;
+	ArrayList<Vehicles> vehiclesArrayListObj;
 	
 	@Override
-	public boolean addVechiclesDetails(Vehicles vehicObj) {
-		LinkedList<Vehicles> linkedUserObj = new LinkedList<>();
-		return linkedUserObj.add(vehicObj);
+	public boolean addVechiclesDetails(List<Vehicles> lnkVehiObj) {
+		vehiclesCollect = new LinkedList<>();
+		return vehiclesCollect.addAll(lnkVehiObj);
 	}
 
 	@Override
-	public void getAllVechiclesDetails() {
-		ArrayList<Vehicles> arrayList = new ArrayList<Vehicles>(linkedVehicles);
-		
-		Iterator<Vehicles> itr = arrayList.iterator();
+	public ArrayList<Vehicles> getAllVechiclesDetails() {
+		vehiclesArrayListObj = new ArrayList<Vehicles>(vehiclesCollect);
+		Iterator<Vehicles> itr = vehiclesArrayListObj.iterator();
 		System.out.println("\nList of Available Vehicles : ");
 		System.out.println("\n==============================");
 		while (itr.hasNext()) {
 			Vehicles vehiObj = itr.next();
-			System.out.println(" " + vehiObj.getBrandName() + "  " + vehiObj.getYearOfRegistration() + "  "+ vehiObj.getPrice()+ " ");
+			System.out.println(" " + vehiObj.getBrandName() + "  " + vehiObj.getYearOfRegistration() + "  "
+					+ vehiObj.getPrice() + " ");
 		}
+		return vehiclesArrayListObj;
 	}
 	
 }
