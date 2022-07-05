@@ -1,21 +1,14 @@
 package com.prog.odinsexps.week5assign;
+public class Vehicles{
 
-public class Vehicles {
-
-	private String brandName;
-	private int yearOfRegistration;
-	private double price;
+	String brandName;
+	int yearOfRegistration;
+	double price;
 	
-	public Vehicles(String brandName, int yearOfRegistration, double price) {
-		this.brandName = brandName;
-		this.yearOfRegistration = yearOfRegistration;
-		this.price = price;
-	}
-
-	@Override
-	public String toString() {
-		return "Vehicles [brandName=" + brandName + ", yearOfRegistration=" + yearOfRegistration + ", price=" + price
-				+ "]";
+	public Vehicles(String brName,int yearOfReg, double prVal) {
+		this.brandName = brName;
+		this.yearOfRegistration = yearOfReg;
+		this.price = prVal;
 	}
 
 	public String getBrandName() {
