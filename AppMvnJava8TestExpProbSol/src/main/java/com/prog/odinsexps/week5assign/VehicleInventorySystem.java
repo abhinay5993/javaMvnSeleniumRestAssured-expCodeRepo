@@ -1,7 +1,5 @@
 package com.prog.odinsexps.week5assign;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,6 +8,7 @@ public class VehicleInventorySystem {
 
 	static UserImpl userImpObj;
 	static VehicleImpl vehicleimpl;
+	static List<Vehicles> linkedListVehiObj;
 	
 	public static void main(String[] args) {
 		userImpObj=new UserImpl();
@@ -90,40 +89,63 @@ public class VehicleInventorySystem {
 	
 	
 	public static void vehiclesManagementOptions() {
-		int choice = 0;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("\nVehicles Management Options : ");
-		System.out.println("=================================");
-		System.out.println("PRESS 1.New Vehicle Registration.");
-		System.out.println("PRESS 2.List of Available Vehicles.");
-		System.out.println("PRESS 3.Sort Result by input.");
-		System.out.println("PRESS 0.Exit.");
-
+		
 		while (true) {
+			int choice = 0;
+			Scanner sc2 = new Scanner(System.in);
+			System.out.println("\nVehicles Management Options : ");
+			System.out.println("=================================");
+			System.out.println("PRESS 1.New Vehicle Registration.");
+			System.out.println("PRESS 2.List of Available Vehicles.");
+			System.out.println("PRESS 3.Sort Result by input.");
+			System.out.println("PRESS 0.Exit.");
+
 			System.out.println("Please Enter your choice : ");
-			choice = sc.nextInt();
+			choice = sc2.nextInt();
 
 			switch (choice) {
 			case 1:
 				registerNewVehicle();
 				break;
 			case 2:
+				if(vehicleimpl.getAllVechiclesDetails().size()>0)
+				{
 				vehicleimpl.getAllVechiclesDetails();
+				}
+				else
+				{
+			    System.out.println("\nNo data available!!..");
+				continue;
+				}
 				break;
 			case 3:
-				System.out.println("Please enter your input to sort results : ");
-				String sortOption = sc.next();
-				if (sortOption.equals("mfgyear")) {
-					Collections.sort(vehicleimpl.getAllVechiclesDetails(), Comparator.comparing(Vehicles::getBrandName)
-							.thenComparing(Vehicles::getYearOfRegistration));
-				} else if (sortOption.equals(sc)) {
-					Collections.sort(vehicleimpl.getAllVechiclesDetails(),
-							Comparator.comparing(Vehicles::getBrandName).thenComparing(Vehicles::getPrice));
+				System.out.println("Please enter your input as 'mfgyear' or 'price' to apply sort-filter results : ");
+				String sortOption = sc2.next();
+				linkedListVehiObj=vehicleimpl.getAllVechiclesDetails();
+				if (sortOption.equalsIgnoreCase("mfgyear")) {
+					Collections.sort(linkedListVehiObj,new SortByYearComparator());
+					System.out.println("\nList of Sorted Vechicles Items by Manufacturing Year : ");
+					System.out.println("==========================================================");
+					for(int i=0;i<linkedListVehiObj.size();i++)
+					{
+					System.out.println(" " + linkedListVehiObj.get(i).getBrandName() + "  " + linkedListVehiObj.get(i).getYearOfRegistration() + "  "
+								+ linkedListVehiObj.get(i).getPrice() + " ");
+					}
+				} else if (sortOption.equalsIgnoreCase("price")) {
+					Collections.sort(linkedListVehiObj,new SortByPriceComparator());
+					System.out.println("\nList of Sorted Vechicles Items by Price : ");
+					System.out.println("=============================================");
+					for(int i=0;i<linkedListVehiObj.size();i++)
+					{
+					System.out.println(" " + linkedListVehiObj.get(i).getBrandName() + "  " + linkedListVehiObj.get(i).getYearOfRegistration() + "  "
+								+ linkedListVehiObj.get(i).getPrice() + " ");
+					}
 				} else {
 					System.out.println("\nWrong!! input..");
 				}
 				break;
 			case 0:
+				System.out.println("\nGood Bye!!..");
 				System.exit(choice);
 				break;
 			default:
@@ -138,10 +160,11 @@ public class VehicleInventorySystem {
 	public static void registerNewVehicle()
 	{
 		try {
-			Scanner sc = new Scanner(System.in);
-			List<Vehicles> linkedListObj=new LinkedList<Vehicles>();
+			vehicleimpl=new VehicleImpl();
+			Scanner sc3 = new Scanner(System.in);
+			linkedListVehiObj=new LinkedList<>();
 			System.out.print("\nEnter How many Vehicles you want to register : ");
-			int noOfRegVehicles = sc.nextInt();
+			int noOfRegVehicles = sc3.nextInt();
 			for (int i = 0; i < noOfRegVehicles; i++) {
 				String[] vBrandNameArray = new String[noOfRegVehicles];
 				int[] vYearOfRegArray = new int[noOfRegVehicles];
@@ -149,18 +172,17 @@ public class VehicleInventorySystem {
 				
 				System.out.println("\nPlease enter Vehicles details : ");
 				System.out.print("\nPlease enter Vehicle Brand name : ");
-				vBrandNameArray[i] = sc.next();
+				vBrandNameArray[i] = sc3.next();
 				System.out.print("\nPlease enter Vehicle Registration Year : ");
-				vYearOfRegArray[i] = sc.nextInt();
+				vYearOfRegArray[i] = sc3.nextInt();
 				System.out.print("\nPlease enter Vehicle Price : ");
-				vehiPriceArray[i] = sc.nextDouble();
+				vehiPriceArray[i] = sc3.nextDouble();
 				
-				Vehicles vehiclesObjX = new Vehicles(vBrandNameArray[i], vYearOfRegArray[i],vehiPriceArray[i]);
-				linkedListObj.add(vehiclesObjX);
+				Vehicles vehiclesObjX = new Vehicles(vBrandNameArray[i],vYearOfRegArray[i],vehiPriceArray[i]);
+				linkedListVehiObj.add(vehiclesObjX);
 				
-				if (!vBrandNameArray[i].isEmpty() && vBrandNameArray[i]!=null && vYearOfRegArray[i]>=0 && vehiPriceArray[i]>=0) {
-					
-					if (vehicleimpl.addVechiclesDetails(linkedListObj)) {
+				if (!vBrandNameArray[i].isEmpty()) {
+					if (vehicleimpl.addVechiclesDetails(linkedListVehiObj)) {
 						System.out.println("\nThank you… your Vehicle registered successfully!!!");
 					} else {
 						System.out.println("\nregistration failed!!!");
