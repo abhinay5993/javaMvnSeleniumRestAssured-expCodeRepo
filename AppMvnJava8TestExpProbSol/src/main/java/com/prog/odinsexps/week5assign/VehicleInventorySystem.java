@@ -1,5 +1,6 @@
 package com.prog.odinsexps.week5assign;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -123,7 +124,7 @@ public class VehicleInventorySystem {
 				String sortOption = sc2.next();
 				linkedListVehiObj=vehicleimpl.getAllVechiclesDetails();
 				if (sortOption.equalsIgnoreCase("mfgyear")) {
-					Collections.sort(linkedListVehiObj,new SortByYearComparator());
+					Collections.sort(linkedListVehiObj,Comparator.comparingInt(Vehicles::getYearOfRegistration));
 					System.out.println("\nList of Sorted Vechicles Items by Manufacturing Year : ");
 					System.out.println("==========================================================");
 					for(int i=0;i<linkedListVehiObj.size();i++)
@@ -132,7 +133,7 @@ public class VehicleInventorySystem {
 								+ linkedListVehiObj.get(i).getPrice() + " ");
 					}
 				} else if (sortOption.equalsIgnoreCase("price")) {
-					Collections.sort(linkedListVehiObj,new SortByPriceComparator());
+					Collections.sort(linkedListVehiObj,Comparator.comparingDouble(Vehicles::getPrice));
 					System.out.println("\nList of Sorted Vechicles Items by Price : ");
 					System.out.println("=============================================");
 					for(int i=0;i<linkedListVehiObj.size();i++)
