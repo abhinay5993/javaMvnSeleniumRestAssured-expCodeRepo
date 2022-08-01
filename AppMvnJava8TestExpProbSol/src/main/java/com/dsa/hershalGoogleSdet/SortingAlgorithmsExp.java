@@ -40,7 +40,7 @@ public class SortingAlgorithmsExp {
 
 	}
 
-	// Merge Sort logic
+	// Merge Sort logic --> No swap logic required
 	public void mergeSortingAlgorithm(double[] inpArray) {
 
 		if (inpArray == null) {
