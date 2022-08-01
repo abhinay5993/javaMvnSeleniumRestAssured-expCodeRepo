@@ -15,7 +15,7 @@ public class RecursiveBinarySearchExp {
 			return -1;
 		}
 		int midIndexPos = startPos + (endPos - startPos) / 2;
-
+		
 		if (inpData[midIndexPos] == searchItem) {
 			return midIndexPos;
 		}
