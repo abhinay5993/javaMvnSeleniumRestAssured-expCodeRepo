@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Edit Contacts</title>
+<title>Edit Book</title>
 
 <!-- Bootstrap core CSS -->
 <link
@@ -27,7 +27,7 @@
 							<form action="<%=request.getContextPath()%>/contactApp?action=update" target="_self" method="post">
 								<div class="modal-header">
 									<div class="card-header" align="left">
-										<h2>Edit Contact Details</h2>
+										<h2>Edit Book</h2>
 									</div>
 								</div>
 								<div class="modal-body">
@@ -39,14 +39,10 @@
 										<input type="text" class="form-control" value=<%=dtoObj.getUserMobileNo()%> name="updateMobileNo" >
 									</div>
 									<div class="ps-3 pe-3 pt-3">
-										<input type="email" class="form-control" value=<%=dtoObj.getUserEmailId()%> name="upEmailId" >
-									</div>
-									<div class="ps-3 pe-3 pt-3">
-										<input type="text" class="form-control" value=<%=dtoObj.getUserCountry()%> name="updateNewCountry" >
+										<input type="text" class="form-control" value=<%=dtoObj.getUserEmailId()%> name="upEmailId" >
 									</div>
 									<div class="d-grid gap-1 ps-3 pe-3 pt-3 pb-3">
-										<button type="submit" class="btn btn-success">Update
-											Details</button>
+										<button type="submit" class="btn btn-success">Save</button>
 									</div>
 								</div>
 							</form>
