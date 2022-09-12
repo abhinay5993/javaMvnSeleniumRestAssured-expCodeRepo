@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>EmployeeSrv</servlet-name>
+		<servlet-class>com.employee.web.EmployeeSrv</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetEmps</servlet-name>
+		<display-name>GetEmps</display-name>
+		<description></description>
+		<servlet-class>com.empms.webapp.GetEmps</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmployeeSrv</servlet-name>
+		<url-pattern>/eurl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetEmps</servlet-name>
+		<url-pattern>/addEmps</url-pattern>
+	</servlet-mapping>
+</web-app>
