@@ -11,8 +11,12 @@ public class AutoReStrTransform {
 	}
 
 	private static String printAutoReStrTransform(String inpStr) {
-		
-		return inpStr;
+		String strArr[] = inpStr.split("-");
+		StringBuilder sbObj = new StringBuilder();
+		for (int i = 0; i < strArr.length; i++) {
+			sbObj.append(strArr[i].charAt(0));
+		}
+		return sbObj.toString();
 	}
 
 }
