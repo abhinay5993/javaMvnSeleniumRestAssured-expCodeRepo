@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "d5e2a250-6db1-4dbb-b534-a6d881859144",
+		"name": "UsersServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "spr-boot-saveUsers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"New Posting..\",\r\n    \"dateOfBirth\": \"1993-09-05\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/saveUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"saveUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "spr-boot-getUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cl-users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cl-users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove-users-by-id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cl-users/remove/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cl-users",
+						"remove",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
