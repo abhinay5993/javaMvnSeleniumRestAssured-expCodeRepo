@@ -1,8 +1,6 @@
 package com.acciojob.subArrsStrings;
 import java.util.Scanner;
 
-import com.problemsolving.testUtilExps.readConfigData;
-
 public class PalindromeWithStrBuilder {
 
 	public static void main(String[] args) {
