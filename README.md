@@ -1,4 +1,4 @@
-###### This Repo is dedicated for project work,experiments,POC's -
+###### This Repo is dedicated for openSource project work,experiments,POC's -
 * DSA & Algorithm Analysis.
 * Core Java.
 * Java-8 Projects.
