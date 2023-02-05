@@ -1,5 +1,3 @@
-#javaMvnSeleniumRestAssured-expCodeRepo
-
 ###### This Repo is dedicated for project work,experiments,POC's -
 * DSA & Algorithm Analysis.
 * Core Java.
