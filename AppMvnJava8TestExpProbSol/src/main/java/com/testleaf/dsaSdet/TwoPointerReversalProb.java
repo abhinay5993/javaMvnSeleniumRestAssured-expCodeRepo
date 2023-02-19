@@ -1,9 +1,9 @@
 package com.testleaf.dsaSdet;
-import java.util.Arrays;
+import java.util.Scanner;
 
 /*
  * 
-prob-1 - Given Sorted array in Non-Descending(i.e ASC or may be same) order , return the array of the square of each number sorted in Non-Descending(i.e ASC or may be same) order
+prob-1 - Reverse input String with two pointer approach (though the Time Complexity is O(n/2) but technically its better solution than O(n)
 
 1)  under stand the problem.
 2)  Ask example of Input/Output and reconfirm it.
@@ -23,27 +23,37 @@ Step 6 to Step 12 plays vital role to crack interviews.
 
 */
 
-public class SortByAscForSquareOfArrayItems {
-	
-	public static void main(String[] args) {
-		double[] numArr= {2,3,8,11,16,23};
-		System.out.println("\nInput array : "+Arrays.toString(numArr));
-		System.out.println("\nOutput Array of Squared Items : "+Arrays.toString(getSortedSquaredItems(numArr)));
-	}
+public class TwoPointerReversalProb {
 
-	/*
-	 * prob-1 - Given Sorted array in Non-Descending(i.e ASC or may be same) order ,
-	 * return the array of the square of each number sorted in Non-Descending(i.e
-	 * ASC) order
-	 * 
-	 */
-	private static double[] getSortedSquaredItems(double[] numArr) {
-		// TODO Auto-generated method stub
-		for (int i = 0; i < numArr.length; i++) {
-			numArr[i] = numArr[i] * numArr[i];
-		}
-		Arrays.sort(numArr);
-		return numArr;
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("\nEnter the input String : ");
+		String inpData=sc.nextLine();
+		System.out.println("\nOutPut Reversed String : "+getReversedStringByTwoPointerSwapApproach(inpData));
 	}
+	
+	public static String getReversedStringByTwoPointerSwapApproach(String inpStr) {
+		if (inpStr == null) {
+			return "Operation can't be done for Null String..";
+		}
+
+		if (inpStr.length() == 0) {
+			return "Empty!! String..";
+		}
+
+		if (inpStr.length() == 1) {
+			return "Non reverseable : " + inpStr;
+		}
+		int lIdx = 0;
+		int rIdx = inpStr.length() - 1;
+		char charItems[] = inpStr.toCharArray();
+		while (lIdx < rIdx) {
+			char tem = charItems[rIdx];
+			charItems[rIdx--] = charItems[lIdx];
+			charItems[lIdx++] = tem;
+		}
+		return new String(charItems);
+	}
+	
 
 }
