@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 /*
  * 
-prob-3 - Move all zeros to the end of array. (with two pointer approach)
+prob-3 - Move all zeros to the end of array. (with two pointer approach) (Position of Non-Zero Should be maintained.
 
 1)  under stand the problem.
 2)  Ask example of Input/Output and reconfirm it.
@@ -28,31 +28,27 @@ public class MoveAllZeroToRightByTwoPointerProb {
 	public static void main(String[] args) {
 		double[] dataItems= {8,0,23,1,-34,0,7,34,0,59,0};
 		System.out.println("\nInput Array Data : "+Arrays.toString(dataItems));
-		System.out.println("\nArray Data avaiable : "+Arrays.toString(twoPointerMoveAllZerosToRight(dataItems)));
+		System.out.println("\nPost Zero Shift/Move to right resultant Array Data : "+Arrays.toString(twoPointerMoveAllZerosToRight(dataItems)));
 
 	}
 
 	private static double[] twoPointerMoveAllZerosToRight(double[] dataItems) {
 		if (dataItems == null) {
-			throw new RuntimeException("Operation can't be done for Null Array..");
+			System.err.println("Operation can't be done for Null Array..");
 		}
 
 		if (dataItems.length == 0) {
-			throw new RuntimeException("Empty!! array..");
+			System.err.println("Empty!! array..");
 		}
 		int l = 0;
-		int r = dataItems.length - 1;
-		double left = dataItems[l];
-		double right = dataItems[r];
-		while (l < r) {
-			if (left != 0 && right == 0) {
-				dataItems[r--] = left;
+		int r = 0;
+		while (r < dataItems.length) {
+			if (dataItems[r] != 0) {
+				double temDat = dataItems[r];
+				dataItems[r] = dataItems[l];
+				dataItems[l++] = temDat;
 			}
-
-			if (left == 0 && right != 0) {
-				dataItems[l++] = right;
-			}
-
+			r++;
 		}
 		return dataItems;
 	}
