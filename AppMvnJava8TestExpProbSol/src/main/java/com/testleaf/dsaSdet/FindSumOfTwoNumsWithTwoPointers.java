@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 
 prob-1 - Given the Sorted input array, find the sum of first two indices of the matching given the target using two pointer approach.
 
-1)  under stand the problem.
+1)  understand the problem.
 2)  Ask example of Input/Output and reconfirm it.
 3)  Find the 3 Types test data to solve the problem - +Positive , -Negative , edge case.
 4)  Don't show excitement to solve the problem infront of interviewer.

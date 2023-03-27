@@ -5,7 +5,7 @@ import java.util.Scanner;
  * 
 prob-1 - Reverse input String with two pointer approach (though the Time Complexity is O(n/2) but technically its better solution than O(n)
 
-1)  under stand the problem.
+1)  understand the problem.
 2)  Ask example of Input/Output and reconfirm it.
 3)  Find the 3 Types test data to solve the problem - +Positive , -Negative , edge case.
 4)  Don't show excitement to solve the problem infront of interviewer.

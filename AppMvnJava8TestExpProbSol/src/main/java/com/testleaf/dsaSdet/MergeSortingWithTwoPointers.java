@@ -1,9 +1,8 @@
 package com.testleaf.dsaSdet;
-import java.util.Arrays;
 
 /*
  * 
-prob-3 - Move all zeros to the end of array. (with two pointer approach) (Position of Non-Zero Should be maintained.
+prob-1 - Two arrays Merge sort of using two pointers algorithms.
 
 1)  understand the problem.
 2)  Ask example of Input/Output and reconfirm it.
@@ -23,36 +22,10 @@ Step 6 to Step 12 plays vital role to crack interviews.
 
 */
 
-public class MoveAllZeroToRightByTwoPointerProb {
+public class MergeSortingWithTwoPointers {
 
 	public static void main(String[] args) {
-		double[] dataItems= {8,0,23,1,-34,0,7,34,0,59,0};
-		System.out.println("\nInput Array Data : "+Arrays.toString(dataItems));
-		System.out.println("\nPost Zero Shift/Move to right resultant Array Data : "+Arrays.toString(twoPointerMoveAllZerosToRight(dataItems)));
 
 	}
-
-	private static double[] twoPointerMoveAllZerosToRight(double[] dataItems) {
-		if (dataItems == null) {
-			System.err.println("Operation can't be done for Null Array..");
-		}
-
-		if (dataItems.length == 0) {
-			System.err.println("Empty!! array..");
-		}
-		int l = 0;
-		int r = 0;
-		while (r < dataItems.length) {
-			if (dataItems[r] != 0) {
-				double temDat = dataItems[r];
-				dataItems[r] = dataItems[l];
-				dataItems[l++] = temDat;
-			}
-			r++;
-		}
-		return dataItems;
-	}
-	
-	
 
 }

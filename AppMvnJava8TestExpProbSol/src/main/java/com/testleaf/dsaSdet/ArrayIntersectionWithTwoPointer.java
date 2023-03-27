@@ -7,7 +7,7 @@ import java.util.List;
  * 
 prob-2 - Array (Sorted items) intersection using eqidirection. (with two pointer approach)
 
-1)  under stand the problem.
+1)  understand the problem.
 2)  Ask example of Input/Output and reconfirm it.
 3)  Find the 3 Types test data to solve the problem - +Positive , -Negative , edge case.
 4)  Don't show excitement to solve the problem infront of interviewer.
