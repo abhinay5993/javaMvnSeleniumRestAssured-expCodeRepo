@@ -1,8 +1,6 @@
 package com.problemsolving.testUtilExps;
 import java.util.Scanner;
 
-import sun.reflect.generics.tree.Tree;
-
 public class GuviUniqeCharFinder {
 
 	public static void main(String[] args) {
