@@ -1,7 +1,7 @@
 ###### This Repo is dedicated for openSource project work,experiments,POC's -
 * DSA & Algorithm Analysis.
 * Core Java.
-* Java-8 Projects.
+* Java-8/JDK-11 Projects.
 * Hybrid Test Automation Framwork with Selenium,Maven,TestNg,CucumberBDD,RestAssured API Automation,Appium Mobile Automation,Other Utility Libraries.
 * servlet and jsp.
 * MySQL , NoSQL.

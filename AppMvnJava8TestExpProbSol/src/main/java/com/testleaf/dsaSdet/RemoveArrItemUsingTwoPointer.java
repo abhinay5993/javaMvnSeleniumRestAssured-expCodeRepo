@@ -1,11 +1,10 @@
 package com.testleaf.dsaSdet;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 /*
  * 
-prob-1 - Given an array and target remove the matching target from the array.
+prob-1 - Given an array and target remove the matching target from the array using two pointers approach.
 
 1)  understand the problem.
 2)  Ask example of Input/Output and reconfirm it.
@@ -25,47 +24,42 @@ Step 6 to Step 12 plays vital role to crack interviews.
 
 */
 
-public class RemoveTargetElementFromArray {
+public class RemoveArrItemUsingTwoPointer {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		double[] dataItems= {7,9,22,76,88,45,90,56,45};
+		double[] dataItems= {7,9,22,76,88,45,90,56,45,78};
+		System.out.println("\nInput Array Data : "+Arrays.toString(dataItems));
 		System.out.println("\nEnter the Target Item : ");
 		double target=sc.nextDouble();
-		System.out.println("\nInput Array Data : "+Arrays.toString(dataItems));
-		System.out.println("\nArray Data avaiable : "+Arrays.toString(removeTargettedElement(dataItems, target)));
+		System.out.println("\nArray Data avaiable : "+Arrays.toString(removeElementUsingTwoPointers(dataItems, target)));
 	}
-	
-	
-	public static double[] removeTargettedElement(double[] inpArr, double targetItem) {
-		boolean blFlag = false;
-		ArrayList arrList = new ArrayList<>();
-		if (inpArr == null) {
+
+	private static double[] removeElementUsingTwoPointers(double[] dataItems, double target) {
+		boolean flgStatus = false;
+		if (dataItems == null) {
 			throw new RuntimeException("Operation can't be done for Null Array..");
 		}
 
-		if (inpArr.length == 0) {
+		if (dataItems.length == 0) {
 			throw new RuntimeException("Empty!! array..");
 		}
 
-		for (int i = 0; i < inpArr.length; i++) {
-			if (inpArr[i] != targetItem) {
-				arrList.add(inpArr[i]);
-				blFlag = true;
+		int l = 0;
+		int r = 0;
+		while (r < dataItems.length) {
+			if (dataItems[r] != target) {
+				dataItems[l++] = dataItems[r];
 			} else {
-				continue;
+				flgStatus = true;
 			}
+			r++;
 		}
-
-		if (!blFlag) {
-			throw new RuntimeException("No Match found!!..");
+		if (!flgStatus) {
+			throw new RuntimeException("No!! match found...");
 		}
-		int newArrListSize = arrList.size();
-		inpArr = new double[newArrListSize];
-		for (int i = 0; i < newArrListSize; i++) {
-			inpArr[i] = (double) arrList.get(i);
-		}
-		return inpArr;
+		System.out.println("\nItem found!! & removed..");
+		return Arrays.copyOf(dataItems, l);
 	}
 	
 

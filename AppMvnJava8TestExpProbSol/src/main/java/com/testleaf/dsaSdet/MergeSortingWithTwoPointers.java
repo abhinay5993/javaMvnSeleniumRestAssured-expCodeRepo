@@ -1,9 +1,8 @@
 package com.testleaf.dsaSdet;
-import java.util.Scanner;
 
 /*
  * 
-prob-1 - Reverse input String with two pointer approach (though the Time Complexity is O(n/2) but technically its better solution than O(n)
+prob-1 - Two arrays Merge sort of using two pointers algorithms.
 
 1)  understand the problem.
 2)  Ask example of Input/Output and reconfirm it.
@@ -23,37 +22,10 @@ Step 6 to Step 12 plays vital role to crack interviews.
 
 */
 
-public class TwoPointerReversalProb {
+public class MergeSortingWithTwoPointers {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("\nEnter the input String : ");
-		String inpData=sc.nextLine();
-		System.out.println("\nOutPut Reversed String : "+getReversedStringByTwoPointerSwapApproach(inpData));
-	}
-	
-	public static String getReversedStringByTwoPointerSwapApproach(String inpStr) {
-		if (inpStr == null) {
-			return "Operation can't be done for Null String..";
-		}
 
-		if (inpStr.length() == 0) {
-			return "Empty!! String..";
-		}
-
-		if (inpStr.length() == 1) {
-			return "Non reverseable : " + inpStr;
-		}
-		int lIdx = 0;
-		int rIdx = inpStr.length() - 1;
-		char charItems[] = inpStr.toCharArray();
-		while (lIdx < rIdx) {
-			char tem = charItems[rIdx];
-			charItems[rIdx--] = charItems[lIdx];
-			charItems[lIdx++] = tem;
-		}
-		return new String(charItems);
 	}
-	
 
 }

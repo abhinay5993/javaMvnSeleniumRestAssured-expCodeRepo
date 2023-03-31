@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 /*
  * 
-prob-1 - Reverse input String with two pointer approach (though the Time Complexity is O(n/2) but technically its better solution than O(n)
+prob-1 - Reversing the vowels with two pointer approach (though the Time Complexity is O(n/2) but technically its better solution than O(n)
+prob-2 - Array (Sorted items) intersection using eqidirection. (with two pointer approach)
 
 1)  understand the problem.
 2)  Ask example of Input/Output and reconfirm it.
@@ -23,16 +24,23 @@ Step 6 to Step 12 plays vital role to crack interviews.
 
 */
 
-public class TwoPointerReversalProb {
+public class ReversingVowelsByTwoPointers {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("\nEnter the input String : ");
-		String inpData=sc.nextLine();
-		System.out.println("\nOutPut Reversed String : "+getReversedStringByTwoPointerSwapApproach(inpData));
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("\nEnter the input string : ");
+			String inpStr=sc.nextLine();
+			System.out.println("\nReversing Vowels Output String : "+twoPointersReversingVowelStrings(inpStr));
+		}
 	}
-	
-	public static String getReversedStringByTwoPointerSwapApproach(String inpStr) {
+
+	/*
+	 * This problem solves in both direction left , right and stops at the middle it
+	 * self hence best time complexity : O(n/2) , wrost case - O(n)
+	 * 
+	 */
+	public static String twoPointersReversingVowelStrings(String inpStr) {
+		inpStr = inpStr.toLowerCase();
 		if (inpStr == null) {
 			return "Operation can't be done for Null String..";
 		}
@@ -44,16 +52,27 @@ public class TwoPointerReversalProb {
 		if (inpStr.length() == 1) {
 			return "Non reverseable : " + inpStr;
 		}
-		int lIdx = 0;
-		int rIdx = inpStr.length() - 1;
-		char charItems[] = inpStr.toCharArray();
-		while (lIdx < rIdx) {
-			char tem = charItems[rIdx];
-			charItems[rIdx--] = charItems[lIdx];
-			charItems[lIdx++] = tem;
+
+		int l = 0;
+		int r = inpStr.length() - 1;
+		char[] charItems = inpStr.toCharArray();
+		while (l < r) {
+			if (isVowel(charItems[l]) && isVowel(charItems[r])) {
+				char temChar = charItems[l];
+				charItems[l++] = charItems[r];
+				charItems[r--] = temChar;
+			} else if (isVowel(charItems[l])) {
+				r--;
+			} else {
+				l++;
+			}
 		}
 		return new String(charItems);
 	}
 	
+	
+	public static boolean isVowel(char ch) {
+		return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+	}
 
 }
