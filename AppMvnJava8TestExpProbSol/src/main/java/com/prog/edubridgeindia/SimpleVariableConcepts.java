@@ -2,7 +2,7 @@ package com.prog.edubridgeindia;
 
 public class SimpleVariableConcepts {
 	
-	int empId,empAge; // Instance variable
+	protected int empId,empAge; // Instance variable
 	static int empSalary;  // static variable
 	
 	public static void main(String[] args) {
