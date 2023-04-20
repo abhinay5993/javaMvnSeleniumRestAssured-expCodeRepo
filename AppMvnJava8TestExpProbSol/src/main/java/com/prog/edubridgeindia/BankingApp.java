@@ -2,7 +2,10 @@ package com.prog.edubridgeindia;
 import java.util.Scanner;
 
 /*
- * Try using switch case for the withdrown(), deposit() also throw and User defined Execption for limit exeed for withdrown.
+ * 
+ * Try using switch case for the withdrown(), deposit() 
+ * also throw and User defined Execption for limit exeed for withdrown.
+ * Need to Handle synchronization concept.
  * 
  */
 
@@ -16,6 +19,7 @@ public class BankingApp {
 	public static void main(String[] args) {
 		System.out.println("\nWelcome to XYZ bank : ");
 		Scanner sctScanner=new Scanner(System.in);
+		BankingApp openBankObj = null;
 		do {
 			System.out.println("\nATM Menu : ");
 			System.out.println("\n===========");
@@ -30,41 +34,44 @@ public class BankingApp {
 			switch (ch) {
 
 			case 1:
-
+				System.out.println("\nEnter Account Holder Name :");
+				String actHoldName=sctScanner.nextLine();
+				System.out.println("\nEnter Account No : ");
+				long acno=sctScanner.nextLong();
+				System.out.println("\nEnter Initial Deposit Amount : ");
+				double initDepositAmt=sctScanner.nextDouble();
+				System.out.println("Enter Initial Balance Amount : ");
+				double initBalAmt=sctScanner.nextDouble();
+				openBankObj=new BankingApp(acno,actHoldName,initDepositAmt,initBalAmt);
 				break;
-
+				
 			case 2:
-
+				System.out.println("\nEnter Amount To Deposit  : ");
+				double newDepositAmt=sctScanner.nextDouble();
+				openBankObj.getBalanceAfterDeposit(newDepositAmt);
 				break;
+				
 			case 3:
-
+				System.out.println("\nEnter Amount To Withdraw  : ");
+				double newWithDrowAmt=sctScanner.nextDouble();
+				openBankObj.getBalanceAfterWithdrawal(newWithDrowAmt);
 				break;
+				
 			case 4:
-
+				openBankObj.getMiniStatement();
 				break;
+				
 			case 5:
-
+				System.err.println("\nMenu Existed!!..");
+				System.exit(0);
 				break;
+				
 			default:
-				break;
+				System.err.println("\nWrong!!.. choice Try Again!!..");
+				continue;
 			}
 			
 		} while (true);
-		
-		//Non Opend Bank A/C
-//		BankingApp openBankObj=new BankingApp(39949,"Rajesh",100, 0);
-//		openBankObj.getMiniStatement();
-//		openBankObj.getBalanceAfterDeposit(5000);
-//		openBankObj.getBalanceAfterWithdrawal(900);
-//		openBankObj.getMiniStatement();
-//		
-//		//Open Bank A/C
-//		BankingApp openBankObj1=new BankingApp(8384,"KK",600, 0);
-//		openBankObj1.getMiniStatement();
-//		openBankObj1.getBalanceAfterDeposit(1000);
-//		openBankObj1.getMiniStatement();
-//		openBankObj1.getBalanceAfterWithdrawal(900);
-//		openBankObj1.getMiniStatement();		
 		
 	}
 	
