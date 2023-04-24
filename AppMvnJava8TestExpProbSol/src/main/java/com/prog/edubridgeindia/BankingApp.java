@@ -20,6 +20,7 @@ public class BankingApp {
 		System.out.println("\nWelcome to XYZ bank : ");
 		Scanner sctScanner=new Scanner(System.in);
 		BankingApp openBankObj = null;
+		try {
 		do {
 			System.out.println("\nATM Menu : ");
 			System.out.println("\n===========");
@@ -34,14 +35,14 @@ public class BankingApp {
 			switch (ch) {
 
 			case 1:
-				System.out.println("\nEnter Account Holder Name :");
-				String actHoldName=sctScanner.nextLine();
 				System.out.println("\nEnter Account No : ");
-				long acno=sctScanner.nextLong();
+				long acno=Long.parseLong(sctScanner.next());
+				System.out.println("Enter Account Holder Name :");
+				String actHoldName=System.console().readLine();
 				System.out.println("\nEnter Initial Deposit Amount : ");
-				double initDepositAmt=sctScanner.nextDouble();
-				System.out.println("Enter Initial Balance Amount : ");
-				double initBalAmt=sctScanner.nextDouble();
+				double initDepositAmt=Double.parseDouble(sctScanner.next());
+				System.out.println("\nEnter Initial Balance Amount : ");
+				double initBalAmt=Double.parseDouble(sctScanner.next());
 				openBankObj=new BankingApp(acno,actHoldName,initDepositAmt,initBalAmt);
 				break;
 				
@@ -72,7 +73,10 @@ public class BankingApp {
 			}
 			
 		} while (true);
-		
+		}
+		catch (Exception e) {
+			System.out.println("Execption : "+e);
+		}
 	}
 	
 	BankingApp(long accNo, String accHolderName, double initDeposit, double balAmount) {
