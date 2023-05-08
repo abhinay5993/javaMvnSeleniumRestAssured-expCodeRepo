@@ -32,22 +32,26 @@ public class SortByAscForSquareOfArrayItems {
 		System.out.println("\nOutput Array of Sorted Squared Items : "+Arrays.toString(getSortedSquaredItems(numArr)));
 	}
 
+	
 	/*
 	 * prob-1 - Given Sorted array in Non-Descending(i.e ASC or may be same) order ,
 	 * return the array of the square of each number sorted in Non-Descending(i.e
 	 * ASC) order
 	 * 
+	 * Time Complexity - Best Case --> O(n/2) (When dataset mix of +ve , -ve) , Wrost Case --> O(n) (When dataset only +ve or -ve)
+	 * Space Complexity - O(n)
+	 * 
 	 */
 	private static double[] getSortedSquaredItems(double[] numArr) {
-		double[] sqarArr=new double[numArr.length];
+		double[] sqarArr = new double[numArr.length];
 		int l = 0;
 		int r = numArr.length - 1;
 		int rInsPos = numArr.length - 1;
 		while (l <= r) {
 			if (Math.abs(numArr[l]) < Math.abs(numArr[r])) {
-				sqarArr[rInsPos--] = numArr[r]*numArr[r--];
+				sqarArr[rInsPos--] = numArr[r] * numArr[r--];
 			} else {
-				sqarArr[rInsPos--] = numArr[l]*numArr[l++];
+				sqarArr[rInsPos--] = numArr[l] * numArr[l++];
 			}
 		}
 		Arrays.sort(sqarArr);
