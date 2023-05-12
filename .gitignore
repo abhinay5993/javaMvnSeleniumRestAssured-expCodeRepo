@@ -1,46 +1,46 @@
 HELP.md
-/AppMvnJava8TestExpProbSol/target
-/AppMvnJava8TestExpProbSol/.settings
-/AppMvnJava8TestExpProbSol/.classpath
-/AppMvnJava8TestExpProbSol/.project
+AppMvnJava8TestExpProbSol/target
+AppMvnJava8TestExpProbSol/.settings
+AppMvnJava8TestExpProbSol/.classpath
+AppMvnJava8TestExpProbSol/.project
 
-/LibMSApp_SpringORM/target
-/LibMSApp_SpringORM/.settings
-/LibMSApp_SpringORM/.classpath
-/LibMSApp_SpringORM/.project
+LibMSApp_SpringORM/target
+LibMSApp_SpringORM/.settings
+LibMSApp_SpringORM/.classpath
+LibMSApp_SpringORM/.project
 
-/Servers/.settings
-/Servers/.project
+Servers/.settings
+Servers/.project
 
-/SprBootWebInitiApp/target
-/SprBootWebInitiApp/.settings
-/SprBootWebInitiApp/.classpath
-/SprBootWebInitiApp/.project
+SprBootWebInitiApp/target
+SprBootWebInitiApp/.settings
+SprBootWebInitiApp/.classpath
+SprBootWebInitiApp/.project
 
-/SpringbootFirstExpApp/target
-/SpringbootFirstExpApp/.settings
-/SpringbootFirstExpApp/.classpath
-/SpringbootFirstExpApp/.project
+SpringbootFirstExpApp/target
+SpringbootFirstExpApp/.settings
+SpringbootFirstExpApp/.classpath
+SpringbootFirstExpApp/.project
 
-/SpringORMApp_EMS/target
-/SpringORMApp_EMS/.settings
-/SpringORMApp_EMS/.classpath
-/SpringORMApp_EMS/.project
+SpringORMApp_EMS/target
+SpringORMApp_EMS/.settings
+SpringORMApp_EMS/.classpath
+SpringORMApp_EMS/.project
 
-/SpringProductManagementApp/target
-/SpringProductManagementApp/.settings
-/SpringProductManagementApp/.classpath
-/SpringProductManagementApp/.project
+SpringProductManagementApp/target
+SpringProductManagementApp/.settings
+SpringProductManagementApp/.classpath
+SpringProductManagementApp/.project
 
-/WebAppServJspEnterDynamic/target
-/WebAppServJspEnterDynamic/.settings
-/WebAppServJspEnterDynamic/.classpath
-/WebAppServJspEnterDynamic/.project
+WebAppServJspEnterDynamic/target
+WebAppServJspEnterDynamic/.settings
+WebAppServJspEnterDynamic/.classpath
+WebAppServJspEnterDynamic/.project
 
-/JpaDbExpTest_SprApp/target
-/JpaDbExpTest_SprApp/.settings
-/JpaDbExpTest_SprApp/.classpath
-/JpaDbExpTest_SprApp/.project
+JpaDbExpTest_SprApp/target
+JpaDbExpTest_SprApp/.settings
+JpaDbExpTest_SprApp/.classpath
+JpaDbExpTest_SprApp/.project
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
