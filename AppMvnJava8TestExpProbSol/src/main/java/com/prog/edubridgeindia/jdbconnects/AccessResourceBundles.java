@@ -39,5 +39,22 @@ public class AccessResourceBundles {
 		return maxNum;
 	}
 	
+	public boolean evenNumChecker(double num) {
+		return (num % 2 == 0);
+	}
+	
+	public String isABinaryNumber(String binNumber) {
+		String binNum = "";
+		if (binNumber == null) {
+			return null;
+		}
+		if (binNumber.isEmpty()) {
+			return "empty";
+		}
+		for (int i = 0; i < binNumber.length(); i++) {
+			binNum = (binNumber.charAt(i) == '0' || binNumber.charAt(i) == '1') ? "Binary" : "Non-Binary";
+		}
+		return binNum;
+	}
 	
 }

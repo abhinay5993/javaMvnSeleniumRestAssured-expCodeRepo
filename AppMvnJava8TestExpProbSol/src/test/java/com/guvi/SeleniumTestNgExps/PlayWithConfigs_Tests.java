@@ -1,5 +1,8 @@
 package com.guvi.SeleniumTestNgExps;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertNull;
+import static org.testng.Assert.assertTrue;
 import org.testng.annotations.Test;
 import com.prog.edubridgeindia.jdbconnects.AccessResourceBundles;
 
@@ -54,5 +57,27 @@ public class PlayWithConfigs_Tests {
 	{
 	assertEquals(434,resBunds.getMaxNumber2Array(new int[]{45,34,64,88,434,54,45,66}));
 	}
+	
+	
+	@Test
+	public void checkEvenNumbers_test8()
+	{
+	assertTrue(resBunds.evenNumChecker(50),"Is a Even Number!!..");
+	}
+	
+	
+	@Test
+	public void checkOddNumbers_test9()
+	{
+	assertFalse(resBunds.evenNumChecker(49),"Is a Odd Number!!..");
+	}
+	
+	
+	@Test
+	public void checkBinaryStringNull_test10()
+	{
+	assertNull(resBunds.isABinaryNumber(null),"Data is Null");
+	}
+	
 	
 }

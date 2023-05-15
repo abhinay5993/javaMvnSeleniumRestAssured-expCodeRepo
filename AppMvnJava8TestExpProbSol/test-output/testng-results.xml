@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="5" failed="2" skipped="0">
+<testng-results ignored="0" total="10" passed="8" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-12T21:03:22 IST" name="Default suite" finished-at="2023-05-12T21:03:22 IST" duration-ms="44">
+  <suite started-at="2023-05-15T20:17:19 IST" name="Default suite" finished-at="2023-05-15T20:17:19 IST" duration-ms="50">
     <groups>
     </groups>
-    <test started-at="2023-05-12T21:03:22 IST" name="Default test" finished-at="2023-05-12T21:03:22 IST" duration-ms="44">
+    <test started-at="2023-05-15T20:17:19 IST" name="Default test" finished-at="2023-05-15T20:17:19 IST" duration-ms="50">
       <class name="com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests">
-        <test-method signature="checkArraysMaxItem_test6()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@68c72235]" started-at="2023-05-12T21:03:22 IST" name="checkArraysMaxItem_test6" finished-at="2023-05-12T21:03:22 IST" duration-ms="6" status="FAIL">
+        <test-method signature="checkArraysMaxItem_test6()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkArraysMaxItem_test6" finished-at="2023-05-15T20:17:19 IST" duration-ms="6" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [434] but found [60]]]>
@@ -20,7 +20,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:907)
 at org.testng.Assert.assertEquals(Assert.java:917)
-at com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests.checkArraysMaxItem_test6(PlayWithConfigs_Tests.java:48)
+at com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests.checkArraysMaxItem_test6(PlayWithConfigs_Tests.java:51)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,23 +55,31 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkArraysMaxItem_test6 -->
-        <test-method signature="checkArraysMaxItem_test7()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@68c72235]" started-at="2023-05-12T21:03:22 IST" name="checkArraysMaxItem_test7" finished-at="2023-05-12T21:03:22 IST" duration-ms="0" status="PASS">
+        <test-method signature="checkArraysMaxItem_test7()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkArraysMaxItem_test7" finished-at="2023-05-15T20:17:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkArraysMaxItem_test7 -->
-        <test-method signature="checkLogIn_test1()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@68c72235]" started-at="2023-05-12T21:03:22 IST" name="checkLogIn_test1" finished-at="2023-05-12T21:03:22 IST" duration-ms="3" status="PASS">
+        <test-method signature="checkBinaryStringNull_test10()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkBinaryStringNull_test10" finished-at="2023-05-15T20:17:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkBinaryStringNull_test10 -->
+        <test-method signature="checkEvenNumbers_test8()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkEvenNumbers_test8" finished-at="2023-05-15T20:17:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEvenNumbers_test8 -->
+        <test-method signature="checkLogIn_test1()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkLogIn_test1" finished-at="2023-05-15T20:17:19 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogIn_test1 -->
-        <test-method signature="checkLogIn_test2()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@68c72235]" started-at="2023-05-12T21:03:22 IST" name="checkLogIn_test2" finished-at="2023-05-12T21:03:22 IST" duration-ms="0" status="PASS">
+        <test-method signature="checkLogIn_test2()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkLogIn_test2" finished-at="2023-05-15T20:17:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogIn_test2 -->
-        <test-method signature="checkLogIn_test3()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@68c72235]" started-at="2023-05-12T21:03:22 IST" name="checkLogIn_test3" finished-at="2023-05-12T21:03:22 IST" duration-ms="1" status="PASS">
+        <test-method signature="checkLogIn_test3()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkLogIn_test3" finished-at="2023-05-15T20:17:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogIn_test3 -->
-        <test-method signature="checkMaxNum_test4()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@68c72235]" started-at="2023-05-12T21:03:22 IST" name="checkMaxNum_test4" finished-at="2023-05-12T21:03:22 IST" duration-ms="1" status="FAIL">
+        <test-method signature="checkMaxNum_test4()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkMaxNum_test4" finished-at="2023-05-15T20:17:19 IST" duration-ms="1" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [60] but found [30]]]>
@@ -84,7 +92,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:907)
 at org.testng.Assert.assertEquals(Assert.java:917)
-at com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests.checkMaxNum_test4(PlayWithConfigs_Tests.java:34)
+at com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests.checkMaxNum_test4(PlayWithConfigs_Tests.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,10 +127,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMaxNum_test4 -->
-        <test-method signature="checkMaxNum_test5()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@68c72235]" started-at="2023-05-12T21:03:22 IST" name="checkMaxNum_test5" finished-at="2023-05-12T21:03:22 IST" duration-ms="1" status="PASS">
+        <test-method signature="checkMaxNum_test5()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkMaxNum_test5" finished-at="2023-05-15T20:17:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMaxNum_test5 -->
+        <test-method signature="checkOddNumbers_test9()[pri:0, instance:com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests@346d61be]" started-at="2023-05-15T20:17:19 IST" name="checkOddNumbers_test9" finished-at="2023-05-15T20:17:19 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOddNumbers_test9 -->
       </class> <!-- com.guvi.SeleniumTestNgExps.PlayWithConfigs_Tests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
