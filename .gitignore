@@ -9,6 +9,11 @@ LibMSApp_SpringORM/.settings
 LibMSApp_SpringORM/.classpath
 LibMSApp_SpringORM/.project
 
+SimpleHibernetORM_App/target
+SimpleHibernetORM_App/.settings
+SimpleHibernetORM_App/.classpath
+SimpleHibernetORM_App/.project
+
 Servers/.settings
 Servers/.project
 
