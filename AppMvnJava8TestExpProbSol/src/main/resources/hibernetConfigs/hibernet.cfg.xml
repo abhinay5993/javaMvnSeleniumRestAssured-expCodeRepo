@@ -14,7 +14,12 @@
 
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
+		<!--
+		//mapping resource or mapping class
 		<mapping resource="Employee.hbm.xml" />
+		//or mapping class
+		<mapping class="com.EduBridge.Employee"/>
+		-->
 	</session-factory>
 
 </hibernate-configuration>
