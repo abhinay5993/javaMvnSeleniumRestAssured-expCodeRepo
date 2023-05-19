@@ -14,5 +14,7 @@
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<mapping resource="com/firstorm/feedpojo/CustomerFeedbackDetails.hbm.xml" />
+		<mapping resource="com/singleParentTwoChild/mappings/GenEmployee.hbm.xml" />
+		
 	</session-factory>
 </hibernate-configuration>

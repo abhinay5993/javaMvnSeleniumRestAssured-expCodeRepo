@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.singleParentTwoChild.mappings.GenEmployee" table="CommonEmployees_tbl" discriminator-value="EMP">
+		<id name="empId" column="emp_id">
+			<generator class="increment"></generator>
+		</id>
+		<discriminator column="type" type="string"></discriminator>
+		<property name="empName" column="emp_name"></property>
+		
+		<subclass name="com.singleParentTwoChild.mappings.RegularEmployeeDetails" discriminator-value="FTE">
+			<property name="salaryAmount" column="salary"></property>
+			<property name="bonusAmount" column="bonus"></property>
+		</subclass>
+
+		<subclass name="com.singleParentTwoChild.mappings.ContractEmployeeDetails" discriminator-value="Contract">
+			<property name="ratePerHrsAmount" column="rate_per_hour"></property>
+			<property name="period" column="period"></property>
+		</subclass>
+		
+	</class>
+</hibernate-mapping>
