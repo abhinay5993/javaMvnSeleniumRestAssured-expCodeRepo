@@ -1,0 +1,35 @@
+https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter
+
+For Spring security project:
+============================
+user java v8,17
+older version of spring --> <version>2.7.12</version>
+-------------------------
+working in java 17
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+spring boot starter Security. --> v2.3.6 --> "we should delete/should not mention the version of this dpendency"
+https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+
+(which delete our source code) before adding dependency in POM.xml
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.28</version>
+</dependency>
+
+In spring security default user - user --> this principle user.
+
+Inmemory database authentication --> using collection framework.
+-----------------------------------------------------------------
+@WebSecurityConfigureAdoptor must be used for -->
+<parent>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-parent</artifactId>
+<version>2.7.12</version>
+<relativePath /> 
+</parent>
