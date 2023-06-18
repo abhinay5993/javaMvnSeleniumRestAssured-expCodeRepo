@@ -1,0 +1,15 @@
+Case Study with Collection Framework+SpringBoot :
+================================================
+Using List -> ArrayList
+Entity - Players - Model class { int id, String playName , this model class contains two Constructor default, parameterized.
+Also use getters and setters.
+List<PlayersModel>
+
+Required this in memory CRUD operation with Players model - add, list/retrive , update , delete.
+
+Full Stack Project -
+1. Login + Registration app using springBoot with in memory storage of collection framework.
+2. Need to take decision we need use same / separate registration , Login model class.
+
+@CrossOrigin(origins="http://localhost:4200")
+in Controller class we need to use above annotation.
