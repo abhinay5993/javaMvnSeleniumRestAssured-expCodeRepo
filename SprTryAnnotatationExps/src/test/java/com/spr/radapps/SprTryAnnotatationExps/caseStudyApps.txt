@@ -13,3 +13,12 @@ Full Stack Project -
 
 @CrossOrigin(origins="http://localhost:4200")
 in Controller class we need to use above annotation.
+
+Design Patterns: --> 3 Types
+================
+1. Creational Design pattern.
+2. Structural Design Pattern.
+3. Behavioural Design Pattern.
+
+
+
