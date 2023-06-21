@@ -1,4 +1,4 @@
-package com.edubridge.designaptapps.creationalDp;
+package com.edubridge.designaptapps.abstractfactorypat;
 
 public class ServerNodePcCls extends ComputerAbsCls {
 
