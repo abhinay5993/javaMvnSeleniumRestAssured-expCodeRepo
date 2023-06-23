@@ -8,6 +8,11 @@ public class PlayerMod {
 	public PlayerMod() {
 	}
 	
+	@Override
+	public String toString() {
+		return "PlayerMod [playId=" + playId + ", playerName=" + playerName + "]";
+	}
+
 	public PlayerMod(int playId, String playerName) {
 		this.playId = playId;
 		this.playerName = playerName;

@@ -14,6 +14,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
+/*
+ * @Configuration 
+ * make this annotation in calls and use 
+ * @Bean annotation
+ * Create a simple class called Cutter Pojo class
+ * while diclaration of @Configuaration class and creating the refacrence add @Autowire annotaion to initilizat object automatically.
+ * 
+ */
+
 @Configuration
 @EnableWebSecurity
 public class LoginAppConfigs extends WebSecurityConfigurerAdapter {

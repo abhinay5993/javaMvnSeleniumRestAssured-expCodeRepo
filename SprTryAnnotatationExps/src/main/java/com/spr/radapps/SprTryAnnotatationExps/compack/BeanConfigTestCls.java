@@ -6,9 +6,10 @@ import com.github.javafaker.Faker;
 import com.spr.radapps.SprTryAnnotatationExps.modpojo.EntityBeanPojoStudent;
 import al.io.pack1.OrganizationsApp;
 import clr.apps.qa.ClientsQABuilds;
+import sport.playerapp.pojomodel.PlayerMod;
 
 @Configuration
-@ComponentScan(basePackages = {"al","clr"})
+@ComponentScan(basePackages = {"al","clr","sport"})
 public class BeanConfigTestCls {
 	
 	Faker fakOb=new Faker();
@@ -41,6 +42,13 @@ public class BeanConfigTestCls {
 	{
 		System.out.println("\nInside @Bean of OrganizationsApp methode!!..");
 		return new ClientsQABuilds();
+	}
+	
+	
+	@Bean
+	public PlayerMod getPlayersBean()
+	{
+	return new PlayerMod();
 	}
 	
 }
