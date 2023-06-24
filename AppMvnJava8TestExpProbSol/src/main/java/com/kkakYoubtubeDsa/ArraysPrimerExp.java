@@ -1,4 +1,4 @@
-package com.dsa.intBitsScalerExps;
+package com.kkakYoubtubeDsa;
 
 public class ArraysPrimerExp {
 
