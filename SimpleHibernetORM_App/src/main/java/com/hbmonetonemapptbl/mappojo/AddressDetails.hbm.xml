@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.hbmonetonemapptbl.mappojo.AddressDetails" table="EmpAddressDetailsTab">
+		<id name="addresId">
+			<generator class="foreign">
+				<param name="property">employeeDetails</param>
+			</generator>
+		</id>
+		<property name="laneno" />
+		<property name="city" />
+		<property name="state" />
+		<property name="addPinCode" />
+		<one-to-one name="employeeDetails" />
+	</class>
+
+</hibernate-mapping>

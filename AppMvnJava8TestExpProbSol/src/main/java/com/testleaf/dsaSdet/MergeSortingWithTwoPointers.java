@@ -1,5 +1,7 @@
 package com.testleaf.dsaSdet;
 
+import java.util.Arrays;
+
 /*
  * 
 prob-1 - Two arrays Merge sort of using two pointers algorithms.
@@ -25,7 +27,11 @@ Step 6 to Step 12 plays vital role to crack interviews.
 public class MergeSortingWithTwoPointers {
 
 	public static void main(String[] args) {
-
+		double inp1Arr[]= {5.5,4,6,7.45,3.3,5};
+		double inp2Arr[]= {2.5,-3,6,8.03,6.5};
+		System.out.println("\nArray1 data : "+Arrays.toString(inp1Arr));
+		System.out.println("\nArray2 data : "+Arrays.toString(inp2Arr));
 	}
+	
 
 }

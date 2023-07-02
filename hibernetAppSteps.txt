@@ -1,0 +1,16 @@
+Steps in creating Hibernate Application: 
+1)	Create Maven Porject
+2)	In src/main/java: create persistent class inside com.EduBridge package: instance variables: and related setter getter methods;
+3)	Create Configuration file inside src/main/java
+4)	Create Mapping  file inside src/main/java
+5)	Operational: DB Specific operation :
+a.	Create object of persistent class
+b.	Call setter method
+c.	Create object of Configuration class
+d.	Object of SessionFactory
+e.	Object of Session
+f.	Object Transaction
+g.	Call save method on session
+h.	Call commite() method on transaction 
+i.	Close session
+j.	Close sessionfatcory

@@ -36,7 +36,8 @@ public class RemoveTargetElementFromArray {
 		System.out.println("\nArray Data avaiable : "+Arrays.toString(removeTargettedElement(dataItems, target)));
 	}
 	
-	
+	//Two Pass --> Time Complexity - O(n)
+	//Space complexity --> O(2n)
 	public static double[] removeTargettedElement(double[] inpArr, double targetItem) {
 		boolean blFlag = false;
 		ArrayList arrList = new ArrayList<>();
@@ -48,6 +49,7 @@ public class RemoveTargetElementFromArray {
 			throw new RuntimeException("Empty!! array..");
 		}
 
+		//Single pass --> O(n)
 		for (int i = 0; i < inpArr.length; i++) {
 			if (inpArr[i] != targetItem) {
 				arrList.add(inpArr[i]);
@@ -62,6 +64,7 @@ public class RemoveTargetElementFromArray {
 		}
 		int newArrListSize = arrList.size();
 		inpArr = new double[newArrListSize];
+		//Two pass --> O(n)
 		for (int i = 0; i < newArrListSize; i++) {
 			inpArr[i] = (double) arrList.get(i);
 		}

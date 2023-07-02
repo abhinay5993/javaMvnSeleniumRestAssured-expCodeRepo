@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.firstorm.feedpojo.CustomerFeedbackDetails" table="CustomerFeedback" lazy="false">
+		<id name="feedId" type="int">
+		    <column name="feed_id" />
+			<generator class="increment" />
+		</id>
+		<property name="userEmail" column="user_email" />
+		<property name="feedBackMsg" column="feed_remarks" />
+		<property name="rateCount" type="int" column="rating_bar" />
+	</class>
+</hibernate-mapping>

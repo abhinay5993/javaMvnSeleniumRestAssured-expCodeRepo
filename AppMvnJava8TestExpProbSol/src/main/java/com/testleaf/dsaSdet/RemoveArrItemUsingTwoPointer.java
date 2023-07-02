@@ -35,6 +35,7 @@ public class RemoveArrItemUsingTwoPointer {
 		System.out.println("\nArray Data avaiable : "+Arrays.toString(removeElementUsingTwoPointers(dataItems, target)));
 	}
 
+	//Time & Space Complexity of --> O(n) 
 	private static double[] removeElementUsingTwoPointers(double[] dataItems, double target) {
 		boolean flgStatus = false;
 		if (dataItems == null) {
