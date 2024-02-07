@@ -1,4 +1,4 @@
-package com.testleaf.dsaSdet;
+package com.testleaf.dsaSdet.ArraysDay1;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ prob-2 - Given the input array, find the sum of any two indices of the matching 
 5)  Ask for Hints !! if at all required.
 6)  Think for alternate solution.
 7)  If we know more than one solution - explain approaches which solution is better (Time/Space complexity wise)/ why? 
-    ask interviewer which to apply.
+    ask/validate with interviewer which to apply.
 8)  If we are sure about optimal solution at least start with wrost case(Then show optimal if known) solution - brute force approach!!.
 9)  Initially to improve the logic build start with Psudo code.
 10) Keep Talking while implementing the code.

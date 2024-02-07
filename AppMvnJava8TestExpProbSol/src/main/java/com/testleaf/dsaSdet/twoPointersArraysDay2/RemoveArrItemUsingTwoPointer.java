@@ -1,4 +1,4 @@
-package com.testleaf.dsaSdet;
+package com.testleaf.dsaSdet.twoPointersArraysDay2;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -35,6 +35,14 @@ public class RemoveArrItemUsingTwoPointer {
 		System.out.println("\nArray Data avaiable : "+Arrays.toString(removeElementUsingTwoPointers(dataItems, target)));
 	}
 
+	/*
+	 * static arrays & dynamic arrays
+	 * static arrays - capacity size is fixed as number of elements is declared at the beginning.
+	 * In order to solve static arrays capacity issue create another dynamic array using - Arrays.copyOf(primitiveArray,newSize)
+	 * dynamic arrays - dynamic arrays size is growable or shrinkable.
+	 * Like - ArrayList , List , LinkedList , Map etc.
+	 * 
+	 */
 	//Time & Space Complexity of --> O(n) 
 	private static double[] removeElementUsingTwoPointers(double[] dataItems, double target) {
 		boolean flgStatus = false;
