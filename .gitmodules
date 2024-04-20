@@ -1,0 +1,6 @@
+[submodule "java-for-testers"]
+	path = java-for-testers
+	url = https://github.com/abhinay5993/java-for-testers.git
+[submodule "vet-clinic"]
+	path = vet-clinic
+	url = https://github.com/abhinay5993/vet-clinic.git
