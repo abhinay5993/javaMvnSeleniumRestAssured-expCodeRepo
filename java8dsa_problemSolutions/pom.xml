@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.java8dsaproblems</groupId>
+	<artifactId>java8dsa_problemSolutions</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>java8dsa_problemSolutions</name>
+	<packaging>jar</packaging>
+	<url>https://github.com/abhinay5993/DSA_Java8ProblemSolving</url>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub abhinay5993 DSA Problem Solving with Java8</name>
+			<url>https://maven.pkg.github.com/abhinay5993/DSA_Java8ProblemSolving</url>
+		</repository>
+	</distributionManagement>
+
+	<developers>
+		<developer>
+			<name>abhinay5993</name>
+			<email>abhinaylunawat5993@gmail.com</email>
+			<organizationUrl>https://github.com/abhinay5993/DSA_Java8ProblemSolving</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/abhinay5993/DSA_Java8ProblemSolving.git</connection>
+		<developerConnection>scm:git:https://github.com/abhinay5993/DSA_Java8ProblemSolving.git</developerConnection>
+		<url>https://github.com/abhinay5993/DSA_Java8ProblemSolving</url>
+		<tag>DSA_with_Java8</tag>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.8.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>3.6.0</version>
+					<configuration>
+						<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.9.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>21</source>
+					<target>21</target>
+					<release>21</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.1</version>
+				<configuration>
+					<includes>
+						<include>**/*.java</include>
+						<include>**/*Tests.java</include>
+					</includes>
+					<suiteXmlFiles>
+						<defaultSuiteXmlFile>src/test/resources/testSuites/TestNgTCs_Executions_TestSuite.xml</defaultSuiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.0.0-M1</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
