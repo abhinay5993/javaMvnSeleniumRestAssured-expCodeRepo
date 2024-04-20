@@ -87,7 +87,7 @@
 						<include>**/*Tests.java</include>
 					</includes>
 					<suiteXmlFiles>
-						<defaultSuiteXmlFile>src/test/resources/testSuites/TestNgTCs_Executions_TestSuite.xml</defaultSuiteXmlFile>
+						<defaultSuiteXmlFile>src/test/resources/testSuites/*.xml</defaultSuiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
