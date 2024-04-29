@@ -1,7 +1,7 @@
 # Eclipse
-.classpath
-.project
-.settings/
+*.classpath
+*.project
+**/.settings/
 test-output/
 
 # Intellij
@@ -15,3 +15,5 @@ test-output/
 # Maven
 log/
 target/
+
+**/bin/
