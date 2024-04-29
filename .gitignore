@@ -5,6 +5,7 @@ HELP.md
 **/.classpath
 **/.project
 **/test-output/
+**/bin
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
