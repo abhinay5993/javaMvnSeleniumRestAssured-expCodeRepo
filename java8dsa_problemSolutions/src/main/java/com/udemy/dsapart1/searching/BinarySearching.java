@@ -26,7 +26,7 @@ public class BinarySearching {
 	System.out.println("\n**************** Performing Recursive Binary seaching ********************");
 	System.out.print("\nEnter the element to be searched : ");
 	double target2Item = scInp.nextDouble();
-	int result2Index=recursiveBinarySearching(inputArr,targetItem,0,inputArr.length-1);
+	int result2Index=recursiveBinarySearching(inputArr,target2Item,0,inputArr.length-1);
 	System.out.println("\nTarget element found at index : "+result2Index);
 	}
 
@@ -38,23 +38,22 @@ public class BinarySearching {
 	 * @return resultIndex - int
 	 * 
 	 */
-	private static int performBinarySearchingOnSortedArray(double[] inputArr, double targetItem) {
-	int resultIndex=-1;
-	int startIndex=0;
-	int endIndex=inputArr.length-1;
-	int midIndex;
-	while (startIndex<=endIndex) {
-		midIndex=(startIndex+endIndex/2);
-		if(inputArr[midIndex]==targetItem) {
-		return midIndex;	
+	private static int performBinarySearchingOnSortedArray(double[] inputArr,double targetItem) {
+		int resultIndex = -1;
+		int startIndex = 0;
+		int endIndex = inputArr.length - 1;
+		int midIndex;
+		while (startIndex <= endIndex) {
+			midIndex = ((startIndex + endIndex) / 2);
+			if (inputArr[midIndex] == targetItem) {
+				return midIndex;
+			}
+			if (inputArr[midIndex] < targetItem) {
+				startIndex = midIndex + 1;
+			} else {
+				endIndex = midIndex - 1;
+			}
 		}
-		if (inputArr[midIndex]<targetItem) {
-		return startIndex=midIndex+1;
-		}
-		else {
-		return endIndex=midIndex-1;	
-		}
-	}
 	return resultIndex;
 	}
 	
@@ -66,25 +65,22 @@ public class BinarySearching {
 	 * @return resultIndex - int
 	 * 
 	 */
-	private static int recursiveBinarySearching(double[] inputArr, double targetItem,int startIndex,int endIndex) {
-	int resultIndex=-1;
-	int midIndex;
-	if(endIndex<startIndex)
-	{
-	return resultIndex;	
-	}
-	midIndex=(startIndex+endIndex/2);
-	if(inputArr[midIndex]==targetItem) {
-	return midIndex;	
-	}
-	if (inputArr[midIndex]<targetItem) {
-	startIndex=midIndex+1;
-	return recursiveBinarySearching(inputArr,targetItem,startIndex,endIndex);
-	}
-	else {
-	endIndex=midIndex-1;
-	return recursiveBinarySearching(inputArr,targetItem,startIndex,endIndex);	
-	}
+	private static int recursiveBinarySearching(double[] inputArr, double targetItem, int startIndex, int endIndex) {
+		int resultIndex = -1;
+		if (endIndex < startIndex) {
+			return resultIndex;
+		}
+		int midIndex = ((startIndex + endIndex) / 2);
+		if (inputArr[midIndex] == targetItem) {
+			return midIndex;
+		}
+		if (inputArr[midIndex] < targetItem) {
+			startIndex = midIndex + 1;
+			return recursiveBinarySearching(inputArr, targetItem, startIndex, endIndex);
+		} else {
+			endIndex = midIndex - 1;
+			return recursiveBinarySearching(inputArr, targetItem, startIndex, endIndex);
+		}
 	}
 
 
