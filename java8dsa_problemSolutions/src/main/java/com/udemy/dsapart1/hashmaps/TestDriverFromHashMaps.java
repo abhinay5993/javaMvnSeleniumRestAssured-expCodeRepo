@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 /**
  * 
@@ -35,9 +36,32 @@ public class TestDriverFromHashMaps {
                .forEach(t ->
     System.out.println("\nKey : "+t.getKey()+"=>hashcode : "+t.getKey().hashCode()+" --> Value : "+t.getValue()+" ")
     );
-    
     //Time complexity is constant - O(1) - to access element
     System.out.println("\nAccess element using key : "+hash1Map.get(null));
+    
+    HashMap hash2Map=new HashMap<>();
+    hash2Map.put("Push",799);
+    hash2Map.put("Carat",-7);
+    hash2Map.put("Him",0.99);
+    hash2Map.put("Her",1055);
+    hash2Map.put("OOPS",7);
+    hash2Map.put("LLD",-2358.555);
+    hash2Map.put("Java",81);
+    hash2Map.put("Android",0.00001);
+    hash2Map.put("Push",Math.PI);
+    //Tree Map creation
+    TreeMap sortedTreeMap=new TreeMap<>(hash2Map);
+    System.out.println("\nSorted Tree Map based on new HashMap : "+sortedTreeMap);
+    
+    //Implementation of Custom HashMap & its properties
+    //Concepts of Default Capacity.
+    //Concepts of Load Factor.
+    //Concepts of buckets threshold value - (Capacity * Load Factor).
+    CustomHashMapEntity custHmp=new CustomHashMapEntity(5,0.5f);
+    custHmp.setMapData(hash2Map);
+    System.out.println("\nStatus - 1 : "+custHmp.toString());
+    custHmp.setMapData(new HashMap<>(hash1Map));
+    System.out.println("\nStatus - 2 : "+custHmp.toString());
     
 	}
 
