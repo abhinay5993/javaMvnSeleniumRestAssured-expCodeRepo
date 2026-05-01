@@ -31,4 +31,7 @@
  28️⃣ Convert CamelCase ➜ snake_case
  29️⃣ Find the Lexicographically Smallest String
  30️⃣ Remove Consecutive Duplicate Words from a Sentence
+ 31  InfoSys: Reverse alternate words from input text string.
+ 
+ 
  
