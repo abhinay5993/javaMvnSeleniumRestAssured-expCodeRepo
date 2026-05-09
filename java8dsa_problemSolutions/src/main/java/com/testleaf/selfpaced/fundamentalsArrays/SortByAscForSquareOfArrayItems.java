@@ -1,4 +1,4 @@
-package com.testleaf.dsaSdet.ArraysDay1;
+package com.testleaf.selfpaced.fundamentalsArrays;
 import java.util.Arrays;
 
 /*

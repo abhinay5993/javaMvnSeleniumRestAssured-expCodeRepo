@@ -30,6 +30,7 @@ public class FindTargetValueIndexBySumOfInputs {
 	double targetVal=scInp.nextDouble();
 	System.out.println("\nOutput Index pairs : ");
 	findSumOfTwoIndicesAgainstTarget(inputArr,targetVal);
+	scInp.close();
 	}
 	
 	
@@ -97,6 +98,7 @@ public class FindTargetValueIndexBySumOfInputs {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+		scInp1Obj.close();
 	}
 
 }

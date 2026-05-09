@@ -23,6 +23,7 @@ public class JumpSearching {
 	double targetItem = scInp.nextDouble();
 	int resultIndex=performJumpSearchingOnSortedArray(inputArr,targetItem);
 	System.out.println("\nTarget element found at index : "+resultIndex);
+	scInp.close();
 	}
 
 	
@@ -121,6 +122,7 @@ public class JumpSearching {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+		scInp1Obj.close();
 	}
 	
 }

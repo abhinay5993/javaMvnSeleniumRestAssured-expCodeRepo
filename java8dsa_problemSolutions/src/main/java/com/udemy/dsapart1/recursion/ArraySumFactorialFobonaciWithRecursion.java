@@ -42,6 +42,7 @@ public class ArraySumFactorialFobonaciWithRecursion {
 			System.out.println(""+nthNumInput+"th Fibonacci number : ");
 			long fiboNumVal=getNthFibonaciNumber(nthNumInput);
 			System.out.println(fiboNumVal);
+			scInpObj.close();
 		}
 	
 	
@@ -90,6 +91,7 @@ public class ArraySumFactorialFobonaciWithRecursion {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+		scInp1Obj.close();
 	}
 
 }

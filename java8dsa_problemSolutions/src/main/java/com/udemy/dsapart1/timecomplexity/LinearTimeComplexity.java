@@ -15,6 +15,7 @@ public class LinearTimeComplexity {
 	pushElementsIntoArray(inputArr);
 	System.out.println("\nInput Array : " + Arrays.toString(inputArr));
 	evaluateMinAndMaxElementFromArray(inputArr);
+	scInp.close();
 	}
 	
 	
@@ -43,6 +44,7 @@ public class LinearTimeComplexity {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+	scInp1Obj.close();
 	}
 
 }

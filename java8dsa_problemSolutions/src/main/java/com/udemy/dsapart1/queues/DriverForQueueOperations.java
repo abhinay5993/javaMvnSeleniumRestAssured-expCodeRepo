@@ -21,6 +21,7 @@ public class DriverForQueueOperations {
 	queObj.doEnqueInsertElement(5000.34);
 	System.out.println("\nNew Que after Enqueue operation : "+Arrays.toString(queObj.getDataItem()));
 	System.out.println("\nLatest size of Queue : "+queObj.getSizeOfQue());
+	scInpObj.close();
 	}
 
 	
@@ -32,6 +33,7 @@ public class DriverForQueueOperations {
 		arrayOfQue[i]=scInp1Obj.nextDouble();
 		queObj.doEnqueInsertElement(arrayOfQue[i]);
 		}
+	scInp1Obj.close();
 	}
 	
 }

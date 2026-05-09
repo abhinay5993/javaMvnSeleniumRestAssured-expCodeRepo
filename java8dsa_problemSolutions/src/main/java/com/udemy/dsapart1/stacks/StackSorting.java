@@ -18,6 +18,7 @@ public class StackSorting {
 	System.out.println("\nInput Stack : " + firstStack);
 	System.out.println("\nOutput Stack sorted in increasing/ascending order  : " +sortStackByAscOrder(firstStack));
 	System.out.println("\nOutput Stack sorted in dicreasing/descending order : " +sortStackByDescOrder(secStack));
+	scInpObj.close();
 	}
 	
 	
@@ -55,6 +56,7 @@ public class StackSorting {
 		firstStack.push(dataItem);
 		secStack.push(dataItem);
 	}
+	scInp1Obj.close();
 	}
 	
 }

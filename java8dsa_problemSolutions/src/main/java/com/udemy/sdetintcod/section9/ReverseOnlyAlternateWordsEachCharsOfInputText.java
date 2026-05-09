@@ -23,9 +23,8 @@ public class ReverseOnlyAlternateWordsEachCharsOfInputText {
 			} else {
 			strBuildObj.append(new StringBuilder(strEachWords)).append(" ");
 			}
-		}
-		
-		return strBuildObj.toString().trim();
+		}	
+	return strBuildObj.toString().trim();
 	}
 
 }

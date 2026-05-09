@@ -28,6 +28,7 @@ public class BinarySearching {
 	double target2Item = scInp.nextDouble();
 	int result2Index=recursiveBinarySearching(inputArr,target2Item,0,inputArr.length-1);
 	System.out.println("\nTarget element found at index : "+result2Index);
+	scInp.close();
 	}
 
 	
@@ -147,6 +148,7 @@ public class BinarySearching {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+		scInp1Obj.close();
 	}
 	
 }

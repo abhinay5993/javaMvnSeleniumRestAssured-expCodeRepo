@@ -1,4 +1,4 @@
-package com.testleaf.dsaSdet.ArraysDay1;
+package com.testleaf.selfpaced.fundamentalsArrays;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -34,6 +34,7 @@ public class RemoveTargetElementFromArray {
 		double target=sc.nextDouble();
 		System.out.println("\nInput Array Data : "+Arrays.toString(dataItems));
 		System.out.println("\nArray Data avaiable : "+Arrays.toString(removeTargettedElement(dataItems, target)));
+		sc.close();
 	}
 	
 	//Two Pass --> Time Complexity - O(n)

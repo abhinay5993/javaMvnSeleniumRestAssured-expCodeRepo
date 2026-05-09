@@ -1,4 +1,4 @@
-package com.testleaf.dsaSdet.twoPointersArraysDay2;
+package com.testleaf.selfpaced.twopointersArrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -33,6 +33,7 @@ public class RemoveArrItemUsingTwoPointer {
 		System.out.println("\nEnter the Target Item : ");
 		double target=sc.nextDouble();
 		System.out.println("\nArray Data avaiable : "+Arrays.toString(removeElementUsingTwoPointers(dataItems, target)));
+		sc.close();
 	}
 
 	/*

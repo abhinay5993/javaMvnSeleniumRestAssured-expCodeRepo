@@ -27,6 +27,7 @@ public class FindMinimumElementFromStack {
 	customPush(1000.300);
 	System.out.println("\nFinal updated stack post push,pop operation : "+firstStack);
 	System.out.println("\nMinimum peeked element from Stack : "+firstStack.peek());
+	scInpObj.close();
 	}
 
 
@@ -56,6 +57,7 @@ public class FindMinimumElementFromStack {
 			System.out.print("\npush the element No " + (i + 1) + " : ");
 			firstStack.push(scInp1Obj.nextDouble());
 		}
+	scInp1Obj.close();
 	}
 	
 }

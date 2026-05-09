@@ -25,6 +25,7 @@ public class CustomPushAndPopToStack {
 	int indexToPop = scInpObj.nextInt();
 	doCustomPopToStackByIndex(indexToPop,firstStack);
 	System.out.println("\nUpdated Stack post pop of elements : " + firstStack);
+	scInpObj.close();
 	}
 
 
@@ -65,6 +66,7 @@ public class CustomPushAndPopToStack {
 			System.out.print("\npush the element No " + (i + 1) + " : ");
 			firstStack.push(scInp1Obj.nextDouble());
 		}
+	scInp1Obj.close();
 	}
 
 }

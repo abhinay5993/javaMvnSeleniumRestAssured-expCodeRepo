@@ -24,6 +24,7 @@ public class SimpleBuildInPriorityQueue {
 	System.out.println("\nLatest peeked item : "+priorQue.peek());
 	System.out.println("\nItem removed : "+priorQue.remove());
 	System.out.println("\nFinal latest updated Priority Queue Items : "+priorQue);
+	scInpObj.close();
 	}
 	
 	
@@ -35,6 +36,7 @@ public class SimpleBuildInPriorityQueue {
 		arrayOfQue[i]=scInp1Obj.nextDouble();
 		priorQue.add(arrayOfQue[i]);
 		}
+	scInp1Obj.close();
 	}
 	
 }

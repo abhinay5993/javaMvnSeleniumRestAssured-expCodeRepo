@@ -24,6 +24,7 @@ public class ArrayDequeWithInBuildQueue {
 	System.out.println("\nLatest peeked item : "+doubleQueue.peek());
 	System.out.println("\nItem removed : "+doubleQueue.remove());
 	System.out.println("\nFinal latest updated ArrayDeque Items : "+doubleQueue);
+	scInpObj.close();
 	}
 	
 	
@@ -35,6 +36,7 @@ public class ArrayDequeWithInBuildQueue {
 		arrayOfQue[i]=scInp1Obj.nextDouble();
 		doubleQueue.add(arrayOfQue[i]);
 		}
+	scInp1Obj.close();
 	}
 	
 }

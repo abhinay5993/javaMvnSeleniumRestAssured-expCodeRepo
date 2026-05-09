@@ -23,6 +23,7 @@ public class DriverForPriorityQueueOperations {
 	queObj.priorityEnqueueOperation(9001);
 	System.out.println("\nNew Priority Sorted Queue after Enqueue operation : "+Arrays.toString(queObj.getDataItem()));
 	System.out.println("\nLatest size of Priority Queue : "+queObj.getSizeOfQue());
+	scInpObj.close();
 	}
 
 	
@@ -34,6 +35,7 @@ public class DriverForPriorityQueueOperations {
 		arrayOfQue[i]=scInp1Obj.nextDouble();
 		queObj.priorityEnqueueOperation(arrayOfQue[i]);
 		}
+	scInp1Obj.close();
 	}
 	
 }

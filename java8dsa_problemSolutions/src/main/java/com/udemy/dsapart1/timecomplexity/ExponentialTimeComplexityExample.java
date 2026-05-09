@@ -17,6 +17,7 @@ public class ExponentialTimeComplexityExample {
 	pushElementsIntoArray(inputArr);
 	System.out.println("\nInput Array data : "+Arrays.toString(inputArr));
 	print2DMatrix(inputArr,rowSize);
+	scInp.close();
 	}
 
 
@@ -47,6 +48,7 @@ public class ExponentialTimeComplexityExample {
 			inputArr[i][j] = scInp1Obj.nextDouble();
 			}
 		}
+	scInp1Obj.close();
 	}
 	
 }

@@ -9,6 +9,7 @@ public class StackBalancedStringChecker {
 	System.out.print("\nEnter the input string : ");
 	String inputStr = scInpObj.nextLine();
 	System.out.println("\nCheck is the input string is balanced : "+isStringBalanced(inputStr));
+	scInpObj.close();
 	}
 
 	private static boolean isStringBalanced(String inputStr) {

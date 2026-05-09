@@ -22,6 +22,7 @@ public class ReversalWithTempStack {
 	moveStackElementsToReverseItems(tempSecStack,temp3rdStack);
 	moveStackElementsToReverseItems(temp3rdStack,firstStack);
 	System.out.println("\nOutput Reversed Stack : "+firstStack);
+	scInpObj.close();
 	}
 
 	
@@ -40,6 +41,7 @@ public class ReversalWithTempStack {
 		System.out.print("\npush the element No " + (i + 1) + " : ");
 		firstStack.push(scInp1Obj.nextDouble());
 		}
+	scInp1Obj.close();
 	}
 
 }

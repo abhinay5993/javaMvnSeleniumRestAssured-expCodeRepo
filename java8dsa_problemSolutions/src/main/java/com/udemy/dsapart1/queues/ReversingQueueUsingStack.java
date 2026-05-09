@@ -17,6 +17,7 @@ public class ReversingQueueUsingStack {
 	pushElementsIntoArray(sizeOfQue);
 	System.out.println("\nInput initial ArrayDeque Items : "+doubleQueue);
 	System.out.println("\nResultant Revered ArrayDeque Items : "+doReverseItemsOfArrayDeque(doubleQueue));
+	scInpObj.close();
 	}
 	
 	
@@ -40,6 +41,7 @@ public class ReversingQueueUsingStack {
 		arrayOfQue[i]=scInp1Obj.nextDouble();
 		doubleQueue.add(arrayOfQue[i]);
 		}
+	scInp1Obj.close();
 	}
 
 }

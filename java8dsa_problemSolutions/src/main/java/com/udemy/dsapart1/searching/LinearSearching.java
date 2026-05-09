@@ -21,6 +21,7 @@ public class LinearSearching {
 	double targetItem = scInp.nextDouble();
 	int resultIndex=performLinearSearching(inputArr,targetItem);
 	System.out.println("\nTarget element found at index : "+resultIndex);
+	scInp.close();
 	}
 
 	
@@ -49,6 +50,7 @@ public class LinearSearching {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+		scInp1Obj.close();
 	}
 	
 }

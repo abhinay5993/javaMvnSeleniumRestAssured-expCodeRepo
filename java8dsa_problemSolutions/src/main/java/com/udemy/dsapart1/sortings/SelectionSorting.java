@@ -14,6 +14,7 @@ public class SelectionSorting {
 	System.out.println("\nInput Array : " + Arrays.toString(inputArr));
 	performSelectionSort(inputArr);
 	System.out.println("\nRequired Selection Sorted array : "+Arrays.toString(inputArr));
+	scInp.close();
 	}
 
 	
@@ -59,6 +60,7 @@ public class SelectionSorting {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+		scInp1Obj.close();
 	}
 	
 }

@@ -34,6 +34,7 @@ public class TestDriverForBinaryTreeOperation {
 	System.out.print("\nEnter element to check in tree : ");
 	double searchDataItem = scInp.nextDouble();
 	System.out.println("\nIs the seached item present in Tree : "+binTreeObj.isElementPresent(searchDataItem));
+	scInp.close();
 	}
 
 	
@@ -45,6 +46,7 @@ public class TestDriverForBinaryTreeOperation {
 		//Inserting nodes to Binary Tree.
 		binTreeObj.insertANode(inputArr[i]);
 		}
+	scInp1Obj.close();
 	}
 
 }

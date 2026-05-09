@@ -1,4 +1,4 @@
-package com.testleaf.dsaSdet.twoPointersArraysDay2;
+package com.testleaf.selfpaced.twopointersArrays;
 import java.util.Scanner;
 
 /*
@@ -30,6 +30,7 @@ public class TwoPointerReversalProb {
 		System.out.println("\nEnter the input String : ");
 		String inpData=sc.nextLine();
 		System.out.println("\nOutPut Reversed String : "+getReversedStringByTwoPointerSwapApproach(inpData));
+		sc.close();
 	}
 	
 	public static String getReversedStringByTwoPointerSwapApproach(String inpStr) {

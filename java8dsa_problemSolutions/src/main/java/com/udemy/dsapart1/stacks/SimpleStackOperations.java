@@ -50,6 +50,7 @@ public class SimpleStackOperations {
 	System.out.println("\nCurrent new final Stack status : "+firstStack);
 	System.out.println("\nFinal size of stack - "+firstStack.size());
 	System.out.println("\nFinal capacity of stack - "+firstStack.capacity());
+	scInpObj.close();
 	}
 
 	private static void pushElementsIntoStack(int sizeOfStack) {
@@ -58,6 +59,7 @@ public class SimpleStackOperations {
 			System.out.print("\npush the element No " + (i + 1) + " : ");
 			firstStack.push(scInp1Obj.nextDouble());
 		}
+	scInp1Obj.close();
 	}
 
 }

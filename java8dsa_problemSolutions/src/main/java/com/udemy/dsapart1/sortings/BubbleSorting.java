@@ -14,6 +14,7 @@ public class BubbleSorting {
 	System.out.println("\nInput Array : " + Arrays.toString(inputArr));
 	performBubbleSort(inputArr);
 	System.out.println("\nRequired bubble Sorted array : "+Arrays.toString(inputArr));
+	scInp.close();
 	}
 
 	
@@ -57,6 +58,7 @@ public class BubbleSorting {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = scInp1Obj.nextDouble();
 		}
+		scInp1Obj.close();
 	}
 	
 }

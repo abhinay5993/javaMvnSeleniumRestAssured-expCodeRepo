@@ -1,4 +1,4 @@
-package com.testleaf.dsaSdet.twoPointersArraysDay2;
+package com.testleaf.selfpaced.twopointersArrays;
 import java.util.Arrays;
 
 /*

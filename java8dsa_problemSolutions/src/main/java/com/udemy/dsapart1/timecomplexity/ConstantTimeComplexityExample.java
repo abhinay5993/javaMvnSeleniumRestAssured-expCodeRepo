@@ -21,6 +21,7 @@ public class ConstantTimeComplexityExample {
 	System.out.print("\nEnter the target Index : ");
 	int targetIndex = scInp.nextInt();
 	System.out.println("\nCheck Null value exists into target index of Array : "+checkNullValueExists(inputArr,targetIndex));
+	scInp.close();
 	}
 
 	
@@ -61,5 +62,6 @@ public class ConstantTimeComplexityExample {
 			System.out.print("\nEnter the element No " + (i + 1) + " : ");
 			inputArr[i] = (Object)scInp1Obj.nextLine();
 		}
+	scInp1Obj.close();
 	}
 }

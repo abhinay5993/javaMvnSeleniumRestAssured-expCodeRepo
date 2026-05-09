@@ -24,6 +24,7 @@ public class HybridQueueUsingStack {
 	performCustomDeque();
 	performCustomDeque();
 	System.out.println("\nLatest hybrid-Queue status : "+srcStack);
+	scInpObj.close();
 	}
 
 	
@@ -55,6 +56,7 @@ public class HybridQueueUsingStack {
 		arrayOfQue[i]=scInp1Obj.nextDouble();
 		performCustomEnque(arrayOfQue[i]);
 		}
+	scInp1Obj.close();
 	}
 	
 }
