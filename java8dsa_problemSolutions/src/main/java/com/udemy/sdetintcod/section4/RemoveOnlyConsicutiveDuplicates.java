@@ -41,7 +41,7 @@ public class RemoveOnlyConsicutiveDuplicates {
 				isConsecutiveDuplicate = true;
 			}
 
-			// Strictly append only if it is a consecutive duplicate
+			// Strictly append only if it is a non-consecutive duplicate
 			if (!isConsecutiveDuplicate) {
 				result.append(current);
 			}
