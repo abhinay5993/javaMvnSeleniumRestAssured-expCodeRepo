@@ -25,7 +25,7 @@ public class Q10Q11Find2ndMaxNumFromAlphanumText {
 		TreeSet<Integer> sortedSetDat = new TreeSet<>();
 		for (char charItems : strInput2Text.toCharArray()) {
 			if (Character.isDigit(charItems)) {
-				// Character to Integer conversion w.r.t ASCII sub-stractions
+				// Character to Integer conversion w.r.t ASCII sub-stractions with '0'
 				int evalNum = charItems - '0';
 				sortedSetDat.add(evalNum);
 			}
